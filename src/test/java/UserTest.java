@@ -1,3 +1,4 @@
+import edu.zju.cst.myproject.model.User;
 import org.junit.*;
 import static org.junit.Assert.*;
 

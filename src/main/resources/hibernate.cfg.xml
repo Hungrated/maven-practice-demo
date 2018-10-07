@@ -12,10 +12,10 @@
 			org.hibernate.dialect.MySQLDialect
 		</property>
 		<property name="connection.url">
-			jdbc:mysql://10.82.59.188:3306/test
+			jdbc:mysql://127.0.0.1:3306/test
 		</property>
-		<property name="connection.username">test</property>
-		<property name="connection.password">test123</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">z295415658</property>
 		<property name="connection.driver_class">
 			com.mysql.jdbc.Driver
 		</property>
@@ -23,7 +23,7 @@
 			maven
 		</property>
 		<property name="hibernate.connection.autocommit">true</property>
-		<mapping class="edu.zju.cst.aoot15.model.User" />
+		<mapping class="edu.zju.cst.myproject.model.User" />
 
 	</session-factory>
 

@@ -6,7 +6,7 @@ public class UserTest {
 
     @Test
     public void testSayHello() {
-        User user = new User();
+        User user = new User("hungrated", "Hangzhou");
         String expected = "Hello world";
         String actual = user.sayHello(" world");
         assertEquals(expected, actual);

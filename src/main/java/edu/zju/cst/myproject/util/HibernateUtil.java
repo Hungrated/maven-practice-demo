@@ -13,7 +13,8 @@ public class HibernateUtil {
         Configuration cfg = new Configuration().configure();
         ServiceRegistry serviceRegistry = new ServiceRegistryBuilder()
                 .applySettings(cfg.getProperties()).buildServiceRegistry();
-        return cfg.buildSessionFactory(serviceRegistry);
+        SessionFactory factory = cfg.buildSessionFactory(serviceRegistry);
+        return factory;
     }
 
     public static SessionFactory getSessionFactory() {

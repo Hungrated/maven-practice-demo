@@ -1,18 +1,28 @@
 package edu.zju.cst.myproject.model;
 
-import org.hibernate.annotations.Entity;
-
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name="user")
+@Table(name = "user")
 public class User {
+
+    @Id
+    @GeneratedValue
     private int id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "address")
     private String address;
+
+    public User() {
+
+    }
 
     public User(String name, String address) {
         this.name = name;
@@ -25,13 +35,10 @@ public class User {
         this.address = address;
     }
 
-    @Id
-    @GeneratedValue
     public int getId() {
         return id;
     }
 
-    @Column(name="name")
     public String getName() {
         return name;
     }
@@ -40,7 +47,6 @@ public class User {
         this.name = name;
     }
 
-    @Column(name="address")
     public String getAddress() {
         return address;
     }

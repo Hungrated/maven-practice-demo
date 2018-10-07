@@ -19,7 +19,6 @@ public class UserDaoTest {
     @Before
     public void setUp() throws Exception {
         userDao = new UserDao();
-
         session = HibernateUtil.openSession();
         session.beginTransaction();
         session.save(new User("admin", "Ningbo"));

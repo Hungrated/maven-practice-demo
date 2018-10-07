@@ -5,7 +5,7 @@ import junit.framework.Assert;
 
 public class EntitiesHelper {
 
-    private static User baseUser = new User(1, "admin", "Ningbo");
+    private static User baseUser = new User("admin", "Ningbo");
 
     public static void assertUser(User expected, User actual) {
         Assert.assertNotNull(expected);
@@ -15,6 +15,8 @@ public class EntitiesHelper {
     }
 
     public static void assertUser(User expected) {
-        assertUser(expected, baseUser);
+        Assert.assertNotNull(expected);
+        Assert.assertEquals(expected.getName(), baseUser.getName());
+        Assert.assertEquals(expected.getAddress(), baseUser.getAddress());
     }
 }

@@ -1,6 +1,6 @@
 import edu.zju.cst.myproject.dao.*;
 
-import org.hibernate.Query;
+//import org.hibernate.Query;
 import org.hibernate.Session;
 import org.junit.After;
 import org.junit.Assert;
